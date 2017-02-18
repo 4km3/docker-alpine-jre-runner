@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+: "${RELEASE_JAR?Need Java app to run}"
+
+set -xe
+
+# Get release binary and place in /usr/local/bin
+wget ${RELEASE_JAR} -O /usr/local/bin/java-jar
+
+# Run the java jar with the included jre java
+/opt/jre/bin/java -jar /usr/local/bin/java-jar $@

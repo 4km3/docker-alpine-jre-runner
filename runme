@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+docker run                                                                     \
+  --rm                                                                         \
+  -e RELEASE_JAR=$RELEASE_JAR                                                  \
+  4km3/jre-runner
